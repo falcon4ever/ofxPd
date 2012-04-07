@@ -52,6 +52,10 @@ typedef int socklen_t;
 #include <stdlib.h>
 #endif
 
+#ifdef __QNX__
+typedef void (*sig_t) (int);
+#endif
+
 #define DEBUG_MESSUP 1      /* messages up from pd to pd-gui */
 #define DEBUG_MESSDOWN 2    /* messages down from pd-gui to pd */
 

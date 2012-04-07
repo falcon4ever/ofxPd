@@ -54,6 +54,8 @@ static char sys_dllextent[] = ".d_ppc", sys_dllextent2[] = ".pd_darwin";
 static char sys_dllextent[] = ".m_i386", sys_dllextent2[] = ".dll";
 #elif defined(ANDROID)
 static char sys_dllextent[] = ".l_arm", sys_dllextent2[] = ".pd_linux";
+#elif defined(__QNX__)
+static char sys_dllextent[] = ".l_arm", sys_dllextent2[] = ".pd_linux";
 #endif
 
     /* maintain list of loaded modules to avoid repeating loads */

@@ -30,7 +30,11 @@ objects use Posix-like threads.  */
 #ifdef _LARGEFILE64_SOURCE
 # define open open64
 # define lseek lseek64
-#define off_t __off64_t
+	#ifdef __QNX__
+	#define off_t off64_t
+	#else
+	#define off_t __off64_t
+	#endif
 #endif
 #ifdef MSW
 #define off_t long
